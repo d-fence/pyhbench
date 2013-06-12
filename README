@@ -1,1 +1,11 @@
 pyhbench.py is a small script that tries to benchmark the different crypto hash algorithms available for python.
+
+The script will hash files recursively in '/usr/share/doc' or the path is specified as first argument.
+It compares the hashing speed of each files with some algorithms from "Crypto.Hash" and the algorithms from "hashlib".
+
+At the end, it will print the total time it took (in seconds) for each hash type.
+
+It uses multiprocessing to speed up things.
+
+During the process, it will print the number of files that are are in the "file queue" and the length of the result queue.
+The file queue is the files that are are discovered and need to be hashed.
